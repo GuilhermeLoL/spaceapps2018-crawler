@@ -19,7 +19,11 @@ async function getData () {
       let scheduled = false
       if (itemDate[x] !== undefined) {
         let dateArray = itemDate[x].innerText.split('/')
-        date = `${dateArray[2]}-${dateArray[0]}-${dateArray[1]}`
+        let day = '0' + dateArray[1]
+        day = day.slice(-2)
+        let month = '0' + dateArray[0]
+        month = month.slice(-2)
+        date = `${dateArray[2]}-${month}-${day}`
         scheduled = true
       }
       let launch = itemLaunch[x].innerText

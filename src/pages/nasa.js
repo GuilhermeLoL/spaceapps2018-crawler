@@ -26,7 +26,13 @@ async function getData () {
       if (dateString.includes(', ')) {
         let msec = Date.parse(dateString)
         let date = new Date(msec)
-        dateString = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+        let day = date.getDate() + 1
+        day = '0' + day
+        day = day.slice(-2)
+        let month = date.getMonth() + 1
+        month = '0' + month
+        month = month.slice(-2)
+        dateString = `${date.getFullYear()}-${month}-${day}`
         scheduled = true
       } else {
         dateString = ''

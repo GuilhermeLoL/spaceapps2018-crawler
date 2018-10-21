@@ -9,8 +9,8 @@ const asyncForEach = require('./utils/asyncForeach')
   data.push(await nasa())
   asyncForEach(data, async e => {
     asyncForEach(e, async e => {
-      axios.post('http://localhost:3000/launches', e)
-        .catch(() => console.log(e))
+      axios.post('http://34.211.242.70:3000/launches', e)
+        .catch(() => console.log(e.title))
     })
   })
 })()
