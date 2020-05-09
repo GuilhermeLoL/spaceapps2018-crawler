@@ -9,7 +9,7 @@
   "author": "Guilherme Beidaki Peres",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "puppeteer": "^1.9.0"
   }
 }
